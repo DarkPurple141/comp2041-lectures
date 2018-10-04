@@ -6,7 +6,7 @@
   // query localStorage
   if (window.localStorage) {
     kittenName.innerText = setFavouriteKittenText(
-      getStorage() || { name: 'not set', time: ''}
+      getStorage() || { name: 'not set', time: "''"}
     );
   }
 
@@ -18,7 +18,7 @@
 
   function getStorage () {
     if (window.localStorage) {
-      return JSON.parse(localStorage.getItem('kitten')) || { name: '', time: 'not set'}
+      return JSON.parse(localStorage.getItem('kitten')) || '{ "name": "", "time": "not set"}'
     }
   }
 

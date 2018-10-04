@@ -3,15 +3,15 @@
     const setButton = document.getElementById('setButton');
     const kittenInput = document.getElementById('kittenName');
 
-    // query localStorage
+    // query sessionStorage
     if (window.localStorage) {
         kittenName.innerText = setFavouriteKittenText(
-            localStorage.getItem('kitten') || 'not set'
+            sessionStorage.getItem('kitten') || 'not set'
         );
     }
     function safeSetStorage (kitten) {
-        if (window.localStorage) {
-            localStorage.setItem('kitten', kitten);
+        if (window.sessionStorage) {
+            sessionStorage.setItem('kitten', kitten);
         }
     }
 
