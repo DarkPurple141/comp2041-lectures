@@ -18,7 +18,7 @@
 
   function getStorage () {
     if (window.localStorage) {
-      return JSON.parse(localStorage.getItem('kitten')) || '{ "name": "", "time": "not set"}'
+      return JSON.parse(localStorage.getItem('kitten')) || { name: "", time: "not set"}
     }
   }
 
